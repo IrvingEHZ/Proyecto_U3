@@ -1,0 +1,108 @@
+/* CSS Document */
+body{
+	background-image: url("../Imagenes/der1ibo-f42dd125-2d6d-43b5-84d1-1b2af70a897d.png");
+	position: relative;
+	padding-bottom: 5em;
+	min-height: 100vh;
+}
+#principal{
+	width: 900px;
+	height: auto; overflow: hidden;
+	border: 0px solid #000;
+	margin:	auto;
+	color: #000000;
+}
+h1{
+	font-family: "Times New Roman"; 
+	color: #FFF;
+	text-align: center
+}
+h2{
+	font-family: "Courier";
+}
+b{
+	text-decoration: underline;
+	text-align: center;
+}
+.slide{
+	margin-top: 10px;
+}
+.slide img{
+	height: 35;
+}
+.copy{
+    font-size: 20px;
+
+}
+
+.sociales{
+	padding: 1em 0;
+    width: 100%;
+    text-align: center;
+	position: absolute;
+    font-size: 28px;
+	bottom: 0;
+}
+
+.sociales a{
+    color: darkmagenta;
+    text-decoration: none;
+}
+.boton a{
+	background: black;
+	cursor: pointer;
+	border: none;
+	padding: 16px 32px;
+	color: #FFF;
+	font-size: 24PX;
+	font-weight: bold;
+	position: relative;
+	border-radius: 12px;
+}
+.boton a::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100;
+	background: linear-gradient(45deg,
+	red, blue, deeppink, blue,
+	red, blue, deeppink, blue);
+	background-size: 800%;
+	border-radius: 10px;
+	filter: blur(8px);
+	animation: glowing 20s linear infinite;
+}
+#panel, #flip {
+ padding: 5px;
+ text-align: center;
+background-color: darkgrey;
+ border: solid 1px #c3c3c3;
+}
+#panel {
+ padding: 4px;
+ display: none;
+}
+#panel2, #flip2 {
+ padding: 5px;
+ text-align: center;
+background-color: darkgrey;
+ border: solid 1px #c3c3c3;
+}
+#panel2 {
+ padding: 4px;
+ display: none;
+}
+@keyframes glowing{
+	0%{
+		background-position: 0 0;
+	}
+	50%{
+		background-position: 400% 0;
+	}
+	100%{
+		background-position: 0 0;
+	}
+}

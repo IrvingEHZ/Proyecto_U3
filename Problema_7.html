@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/Estilo.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<title>Problema_7</title>
+	<script language="javascript">
+	<!--
+	 $(document).ready(function(){
+	 $("#flip").click(function(){
+	 $("#panel").slideDown("slow");
+	 });
+	});$(document).ready(function(){
+	 $("#flip2").click(function(){
+	 $("#panel2").slideDown("slow");
+	 });
+	});
+	function restablece(){
+		location.reload();
+	}
+    function opciones()
+    {
+        var se = document.f1.seleccionar.value;
+        var montoF = document.f1.mC.value;
+
+        var monF=0;
+        var monI=0;
+        var monNI=0;
+        var monCI=0;
+        var monCL=0;
+
+        var impuesto=0;
+        var interes=0;
+        var interesN=0;
+        var cuotaI=0;
+        var cadaL=0;
+
+
+        var montoFS = document.f1.montof.value;
+        var montoIS = document.f1.montoI.value;
+        var montoNIS = document.f1.montoNI.value;
+        var montoCIS = document.f1.montoCI.value;
+        var montoCLS = document.f1.montoCL.value;
+        switch (parseInt(se)) 
+        {
+            case 0:
+                if (montoF) 
+                {
+                        impuesto = parseFloat(montoF)*1.10;
+                        monF=impuesto;
+                        document.f1.montof.value=monF;
+
+                        interes = impuesto*0.05;
+                        monI=interes;
+                        document.f1.montoI.value=monI;
+
+                        interesN = monI+monF;
+                        monNI=interesN;
+                        document.f1.montoNI.value=monNI;
+
+                        cuotaI = monNI-(monNI*0.60);
+                        monCI=cuotaI;
+                        document.f1.montoCI.value=monCI;
+
+                        cadaL = (monNI - cuotaI)/2;
+                        monCL=cadaL;
+                        document.f1.montoCL.value=monCL;
+                }
+                break;
+            case 1:
+                    if (montoF) 
+                    {
+                        impuesto = parseFloat(montoF)*1.10;
+                        monF=impuesto;
+                        document.f1.montof.value=monF;
+
+                        interes = impuesto*0.10;
+                        monI=interes;
+                        document.f1.montoI.value=monI;
+
+                        interesN = monI+monF;
+                        monNI=interesN;
+                        document.f1.montoNI.value=monNI;
+
+                        cuotaI = monNI-(monNI*0.50);
+                        monCI=cuotaI;
+                        document.f1.montoCI.value=monCI;
+
+                        cadaL = (monNI - cuotaI)/4;
+                        monCL=cadaL;
+                        document.f1.montoCL.value=monCL;
+                    }
+                break;
+            case 2: 
+                    if (montoF) 
+                    {
+                        impuesto = parseFloat(montoF)*1.10;
+                        monF=impuesto;
+                        document.f1.montof.value=monF;
+
+                        interes = impuesto*0.15;
+                        monI=interes;
+                        document.f1.montoI.value=monI;
+
+                        interesN = monI+monF;
+                        monNI=interesN;
+                        document.f1.montoNI.value=monNI;
+
+                        cuotaI = monNI-(monNI*0.35);
+                        monCI=cuotaI;
+                        document.f1.montoCI.value=monCI;
+
+                        cadaL = (monNI - cuotaI)/6;
+                        monCL=cadaL;
+                        document.f1.montoCL.value=monCL;
+                    }
+                break;
+           }
+   }
+	//-->
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Barra de navegacion</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Problema_7.html">Interes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Problema_3.html">Sueldo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	<div id="principal">
+	<div class="container">
+    <h1 >≫ ──── ≪VENTA≫ ──── ≪</h1>
+	  <div id="flip2"><span class="Subtitulo">Ver Ejercicio</span></div>
+		<div id="panel2">
+		<img src="Imagenes/Captura de pantalla 2022-11-27 171258.png" width="727" height="220" alt=""/>
+		</div>
+<p id="demo"></p>
+		<form name="f1" method="POST">
+    <div class="form-group">
+		<table align="center" width="47%" border="0">
+		  <tbody>
+			<tr>
+				<td><font color="#FFF"><label>Digite el monto de compra: </label></font></td>
+			  <td><input type="text" class="form-control" name="mC"><br></td>
+			</tr>
+			<tr>
+				<td><font color="#FFF"><label>Opcion de Transporte: </label></font></td>
+			  <td>
+				<select name="seleccionar" class="form-control"><br>
+					<option value="0">Tipo de financiamiento 1</option>
+					<option value="1">Tipo de financiamiento 2</option>
+					<option value="2">Tipo de financiamiento 3</option>
+				</select>
+				</td>
+			</tr>
+		  </tbody>
+		</table>
+		<table align="center">
+			<div class="btn-group" role="group" aria-label="Basic outlined example">
+			<tr>
+			<td width="90" height="47" align="center">
+			 <input type="reset" name="borrado" value="Borrar" class="btn btn-outline-primary" />
+			 </td>
+			<td width="137" align="center">
+			 <input type="button"  name="" value="Ejecutar" onclick="opciones()" class="btn btn-outline-primary">
+			 </td>
+			 <td>
+			 <input type="button" name="Restablecer" value="Restablecer" class="btn btn-outline-primary" onclick="restablece();"/>
+			 </td>
+			</tr>
+			</div>
+		</table>
+        
+       <br>
+		<div id="flip"><span class="Subtitulo">Intereses</span></div>
+		<div id="panel">
+		<table width="61%" border="0" align="center">
+		  <tbody>
+			<tr align="center">
+			  <td><label for="resultado">Factura:
+				  <input type="text" class="form-control" id="montof" name="montof" >
+				  </label>
+			  </td>
+			</tr>
+		  </tbody>
+		</table>
+		<table align="center" width="60%" border="1">
+		  <tbody>
+			<tr align="center">
+			  <td><label for="resultado">Intereses:</label></td>
+			  <td><label for="resultado">Cuota inicial:</label></td>
+			  <td><label for="resultado">Letra por pagar:</label></td>
+			</tr>
+			<tr align="center">
+			  <td><input type="text" class="form-control" id="montoI" name="montoI"></td>
+			  <td><input type="text" class="form-control" id="montoCI" name="montoCI"></td>
+			  <td><input type="text" class="form-control" id="montoCL" name="montoCL"></td>
+			</tr>
+		  </tbody>
+		</table>
+		<table align="center" width="61%" border="0">
+		  <tbody>
+			<tr>
+			  <td align="center"><label for="resultado">Nueva factura:
+				  <input type="text" class="form-control" id="montoNI" name="montoNI">
+				  </label>
+			  </td>
+			</tr>
+		  </tbody>
+		</table> 
+		</div>
+    </div>
+</form>
+	</div>
+	</div>
+	<div class="sociales">
+		<marquee direction="right"><img src="Imagenes/mario.gif" width="100" height="100" alt=""/></marquee>
+	</div>
+</body>
+</html>
